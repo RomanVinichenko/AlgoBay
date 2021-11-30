@@ -44,7 +44,6 @@ const scripts = () => {
     return src(['app/js/index.js'])
         .pipe(sourcemaps.init())
         .pipe(concat('index.min.js'))
-        .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(dest('app/js'))
         .pipe(browserSync.stream());
