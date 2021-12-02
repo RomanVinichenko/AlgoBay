@@ -67,35 +67,105 @@ body {
     clip: rect(0, 0, 0, 0);
 }
 
+.hero__inner {
+    position: relative;
+
+    .slick-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 8px;
+        display: flex;
+        transform: translateX(-50%);
+
+        .slick-active {
+            button {
+                position: relative;
+                background-color: $blue-light;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: -5px;
+                    top: -5px;
+                    width: 10px;
+                    height: 18px;
+                    background-image: url("../images/elipse.svg");
+                }
+            }
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+
+            button {
+                padding: 0;
+                width: 8px;
+                height: 8px;
+                border: none;
+                border-radius: 50%;
+                font-size: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .hero__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .slick-arrow {
+        top: 46%;
+        padding: 16px;
+        border: 1px solid #e4e7e9;
+        border-radius: 16px;
+    }
+
+    .slick-prev {
+        left: -88px;
+        background-image: url("../images/top-left.svg");
+        background-color: $gray-light;
+    }
+
+    .slick-next {
+        right: -88px;
+        background-image: url("../images/top-right.svg");
+        background-color: $wh;
+    }
+}
+
 .slick-arrow {
     position: absolute;
-    top: -141px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 56px;
     height: 56px;
-    border-radius: 4px;
     font-size: 0;
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
-.slick-prev {
-    right: 114px;
-    border: 1px solid $border;
-    background-image: url("../images/prev-arrow.svg");
-    background-color: $wh;
-}
+.blog__articles {
+    .slick-arrow {
+        top: -141px;
+        border-radius: 4px;
+    }
 
-.slick-next {
-    right: 34px;
-    border: none;
-    background-image: url("../images/next-arrow.svg");
-    background-color: $blue-medium;
-}
+    .slick-prev {
+        right: 114px;
+        border: 1px solid $border;
+        background-image: url("../images/prev-arrow.svg");
+        background-color: $wh;
+    }
 
-.slick-dots {
-    position: absolute;
+    .slick-next {
+        right: 34px;
+        border: none;
+        background-image: url("../images/next-arrow.svg");
+        background-color: $blue-medium;
+    }
 }

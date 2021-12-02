@@ -1,5 +1,5 @@
 $(function () {
-    $('.').slick({
+    $('.hero__inner').slick({
         loop: true,
         infinite: true,
         slidesToShow: 1,
