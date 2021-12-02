@@ -39,37 +39,45 @@
     </div>
 </header>
 <div class="main">
-    <section class="hero">
-        <div class="container">
-            <div class="hero__inner">
-                <div class="hero__info">
-                    <h1 class="hero__title title">Discover your growth with advanced analytics</h1>
-                    <p class="hero__subtitle">Premium webflow template for your growing SaaS and technology businesses.
-                        Win
-                        more clients.
-                    </p>
-                    <button class="hero__button button">
-                        Get Started
-                    </button>
-                </div>
-                <div class="hero__form">
-                    <form class="form">
-                        <h3 class="form__title">
-                            Start here!
-                        </h3>
-                        <label class="form__label" for="nickname">Input your name</label>
-                        <input class="form__input" type="text" name="name" id="nickname" placeholder="Name" required>
-                        <label class="form__label" for="mail"></label>
-                        <input class="form__input" type="email" name="mail" id="mail"
-                               placeholder="companyname@gmail.com" required>
-                        <button class="form__button button" type="submit">
-                            Register Now
+    <div class="container">
+        <section class="hero">
+            <div class="container-sm">
+                <div class="hero__inner">
+                    <div class="hero__info">
+                        <h1 class="hero__title title">Discover your growth with advanced analytics</h1>
+                        <p class="hero__subtitle">Premium webflow template for your growing SaaS and technology
+                            businesses.
+                            Win more clients.
+                        </p>
+                        <button class="hero__button button">
+                            Get Started
                         </button>
-                    </form>
+                    </div>
+                    <div class="hero__form">
+                        <form class="form">
+                            <h3 class="form__title">
+                                Start here!
+                            </h3>
+                            <div class="form__input-wrapper">
+                                <label class="form__label sr-only" for="nickname">Input your name</label>
+                                <input class="form__input" type="text" name="name" id="nickname" placeholder="Name"
+                                   required>
+                            </div>
+                            <div class="form__input-wrapper form__input-mail">
+                                <label class="form__label sr-only" for="mail">Input your email</label>
+                                <input class="form__input" type="email" name="mail" id="mail"
+                                   placeholder="E-mail" required>
+                            </div>
+
+                            <button class="form__button button" type="submit">
+                                Register Now
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <section class="video">
         <div class="container-sm">
             <div class="video__inner">
@@ -310,27 +318,54 @@
                                 </a>
                             </div>
                         </article>
-                        <!--                    <article class="article">-->
-                        <!--                        <img class="article__img" src="images/article-4.jpg" alt="Article logo">-->
-                        <!--                        <div class="article__content">-->
-                        <!--                            <span class="article__date">20 June 2020</span>-->
-                        <!--                            <h3 class="article__title">Imagine and Create</h3>-->
-                        <!--                            <p class="article__text">Lorem Ipsum is simply dummy text of the printing and typesetting-->
-                        <!--                                industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,-->
-                        <!--                                when-->
-                        <!--                                an unknown printer took a galley of type and scrambled it to </p>-->
-                        <!--                            <a class="link" href="#">-->
-                        <!--                                Learn more-->
-                        <!--                                <svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"-->
-                        <!--                                     xmlns="http://www.w3.org/2000/svg">-->
-                        <!--                                    <path d="M3.75 12H20.25" stroke="#1E2949" stroke-width="1.5" stroke-linecap="round"-->
-                        <!--                                          stroke-linejoin="round"/>-->
-                        <!--                                    <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="#1E2949" stroke-width="1.5"-->
-                        <!--                                          stroke-linecap="round" stroke-linejoin="round"/>-->
-                        <!--                                </svg>-->
-                        <!--                            </a>-->
-                        <!--                        </div>-->
-                        <!--                    </article>-->
+                        <article class="article">
+                            <img class="article__img" src="images/article-4.jpg" alt="Article logo">
+                            <div class="article__content">
+                                <span class="article__date">20 June 2020</span>
+                                <h3 class="article__title">Imagine and Create</h3>
+                                <p class="article__text">Lorem Ipsum is simply dummy text of the printing and
+                                    typesetting
+                                    industry Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s,
+                                    when
+                                    an unknown printer took a galley of type and scrambled it to </p>
+                                <a class="link" href="#">
+                                    Learn more
+                                    <svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.75 12H20.25" stroke="#1E2949" stroke-width="1.5"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"/>
+                                        <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="#1E2949" stroke-width="1.5"
+                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
+                        <article class="article">
+                            <img class="article__img" src="images/article-4.jpg" alt="Article logo">
+                            <div class="article__content">
+                                <span class="article__date">20 June 2020</span>
+                                <h3 class="article__title">Imagine and Create</h3>
+                                <p class="article__text">Lorem Ipsum is simply dummy text of the printing and
+                                    typesetting
+                                    industry Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s,
+                                    when
+                                    an unknown printer took a galley of type and scrambled it to </p>
+                                <a class="link" href="#">
+                                    Learn more
+                                    <svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.75 12H20.25" stroke="#1E2949" stroke-width="1.5"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"/>
+                                        <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="#1E2949" stroke-width="1.5"
+                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -428,9 +463,8 @@
         </div>
     </div>
 </div>
-
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src='js/index.min.js'></script>
 </body>
 
