@@ -1,0 +1,74 @@
+.terms {
+  &__inner {
+    margin: 0 auto;
+    padding: 160px 0;
+    max-width: 1184px;
+
+    @include r($xl) {
+      padding: 80px 0;
+    }
+
+    @include r($lg) {
+      padding: 40px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 24px;
+    color: $black;
+  }
+
+  &__text-box {
+    margin-bottom: 40px;
+    padding-left: 24px;
+
+    @include r($lg) {
+      margin-bottom: 32px;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 64px;
+    padding: 8px;
+    width: 100%;
+    max-width: 399px;
+    border-radius: 4px;
+    background-color: $gray-light;
+
+    @include r($lg) {
+      margin-bottom: 32px;
+    }
+
+    @include r($sm) {
+      justify-content: space-around;
+      padding: 4px 0;
+      max-width: 100%;
+    }
+  }
+
+  &__button {
+    color: $blue-medium;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+
+    @include r($sm) {
+      padding: 0 5px;
+    }
+
+    &:hover {
+      color: $wh;
+      background-color: $blue-medium;
+    }
+  }
+}
