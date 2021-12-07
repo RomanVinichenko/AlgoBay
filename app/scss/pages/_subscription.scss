@@ -1,0 +1,11 @@
+.subscription {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0;
+  }
+
+  &__form {
+    background-image: none;
+  }
+}
