@@ -1,0 +1,32 @@
+.question {
+  padding: 160px 0;
+
+  &__item {
+    padding: 50px 40px;
+    border: 1px solid $border;
+    border-radius: 8px;
+    background-image: url("../images/accordion.svg");
+    background-position: center right 40px;
+    background-size: 56px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    color: $black;
+  }
+
+  &__text {
+    display: none;
+  }
+}

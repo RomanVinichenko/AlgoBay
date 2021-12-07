@@ -46,9 +46,11 @@ body {
   position: absolute;
   left: 50%;
   top: 20px;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   visibility: hidden;
+  padding: 10px;
   border: 1px solid rosybrown;
   background-color: beige;
   cursor: pointer;
@@ -253,6 +255,54 @@ body {
 
     @include r($xl) {
       transform: translateX(15%);
+    }
+  }
+}
+
+.page-top {
+  padding: 120px 0;
+  background-color: $gray-light;
+
+  &__content {
+    max-width: 576px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 1.28;
+    color: $black;
+
+    @include r($lg) {
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 1.33;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 1.66;
+    color: $gray-dark;
+
+    @include r($xl) {
+      margin-bottom: 24px;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    @include r($lg) {
+      font-size: 14px;
+      line-height: 1.57;
     }
   }
 }
