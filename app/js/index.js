@@ -43,3 +43,9 @@ $(function () {
         ],
     });
 });
+
+const button = document.querySelector('.button__links');
+const links = document.querySelector('.links');
+button.addEventListener('click', function () {
+    links.classList.toggle('links__active');
+});

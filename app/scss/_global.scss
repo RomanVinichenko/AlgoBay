@@ -34,6 +34,30 @@ body {
   }
 }
 
+.button__links {
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.links {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  border: 1px solid rosybrown;
+  background-color: beige;
+  cursor: pointer;
+
+  &__active {
+    visibility: visible;
+  }
+}
+
 .button {
   display: inline-flex;
   align-items: center;
