@@ -1,0 +1,86 @@
+.contact-top {
+  padding: 120px 0;
+  background-color: $gray-light;
+
+  &__content {
+    max-width: 576px;
+  }
+
+  &__subtitle {
+    margin-bottom: 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.contact {
+  padding: 160px 0;
+
+  &__mail,
+  &__tel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 64px;
+    height: 48px;
+    font-weight: 500;
+    color: $black;
+    background-image: url("../images/contact-mail.svg");
+    background-position: center left;
+    background-size: 48px;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__tel {
+    background-image: url("../images/contact-tel.svg");
+  }
+
+  &__mail {
+    margin-bottom: 24px;
+  }
+
+  &__info {
+    margin-bottom: 48px;
+  }
+
+  &__descr {
+    margin-bottom: 24px;
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    height: 56px;
+    border: 1px solid $gray;
+    background-color: $wh;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 576px;
+  }
+
+  &__input {
+    margin-bottom: 24px;
+    padding: 17px;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: $wh;
+  }
+}
