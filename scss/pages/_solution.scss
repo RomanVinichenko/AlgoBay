@@ -1,0 +1,62 @@
+.tariffs {
+  .button--light {
+    width: 100%;
+    background-color: $blue-light;
+  }
+
+  .button--medium {
+    width: 100%;
+  }
+
+  .button--dark {
+    width: 100%;
+    background-color: $blue-dark;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 160px 0;
+  }
+
+  &__item {
+    padding: 56px;
+    max-width: 475px;
+    border-radius: 4px;
+    background-color: $gray-light;
+  }
+
+  &__name {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    color: $black;
+  }
+
+  &__points {
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 24px;
+    color: $gray-dark;
+  }
+
+  &__point {
+    padding-left: 56px;
+    font-size: 24px;
+    line-height: 1.66;
+    color: $gray-dark;
+    background-image: url("../images/done.svg");
+    background-position: center left;
+    background-size: 40px;
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}

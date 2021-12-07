@@ -1,0 +1,15 @@
+.details {
+  padding: 160px 0;
+
+  &__title {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    color: $black;
+  }
+
+  &__descr {
+    margin-bottom: 64px;
+  }
+}
