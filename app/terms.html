@@ -13,17 +13,26 @@
 </head>
 
 <body>
+<button class="button__links"></button>
+<div class="links">
+  <a href="terms.html">terms</a>
+  <a href="contact.html">contact</a>
+  <a href="solution.html">solution</a>
+  <a href="faq.html">faq</a>
+  <a href="solution-detail.html">solution-details</a>
+  <a href="subscription.html">subscription</a>
+</div>
 <header class="header">
   <div class="container">
     <nav class="menu">
-      <a class="logo" href="#">
-        <img class="logo__img" src="images/logo.svg" alt="Logo">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="images/logo.svg" alt="Logo"/>
       </a>
       <ul class="menu__list">
-        <li class="menu__item">
+        <li class="menu__item menu__item--drop">
           <a class="menu__link" href="solution.html">Solutions</a>
         </li>
-        <li class="menu__item">
+        <li class="menu__item menu__item--drop">
           <a class="menu__link" href="#">About</a>
         </li>
         <li class="menu__item">
@@ -37,35 +46,32 @@
         </li>
       </ul>
       <div class="menu__buttons">
-        <button class="button menu__button--sign">
-          Sign in
-        </button>
-        <button class="button">
-          Register now
-        </button>
+        <button class="button menu__button--sign">Sign in</button>
+        <button class="button">Register now</button>
       </div>
       <button class="menu__burger">
-        <img class="menu__burger-img" src="images/burger.svg" alt="Burger menu">
+        <img class="menu__burger-img" src="images/burger.svg" alt="Burger menu" />
       </button>
     </nav>
   </div>
 </header>
+
 <div class="main">
   <section class="terms">
     <div class="container">
       <div class="terms__inner">
         <div class="terms__box">
-          <button class="terms__button button">
+          <button class="terms__button-terms button">
             Terms & Conditions
           </button>
-          <button class="terms__button button">
+          <button class="terms__button-privacy button">
             Privacy policy
           </button>
         </div>
-        <ul class="terms__list">
-          <li class="terms__item">
-            <h1 class="terms__title">1. Definitions</h1>
-            <div class="terms__text-box">
+        <ul class="text-block__list">
+          <li class="text-block__item">
+            <h1 class="text-block__title">1. Definitions</h1>
+            <div class="text-block__box">
               <p>1.1 User means the entity who uses the Service.</p>
               <p>1.2 Agreement means the agreement, including all appendices, to which these General Terms and
                 Conditions
@@ -86,9 +92,9 @@
                 banks are open to the public other than for internet services.</p>
             </div>
           </li>
-          <li class="terms__item">
-            <div class="terms__title">2. PLA Implementation pla</div>
-            <div class="terms__text-box">
+          <li class="text-block__item">
+            <h3 class="text-block__title">2. PLA Implementation pla</h3>
+            <div class="text-block__box">
               <p>2.1 The Implementation Plan describes the measures required for enabling the Service to be provided to
                 the Buyer in accordance with the Service Description and the time plan under which the measures are to
                 be
@@ -100,9 +106,9 @@
                 for the providing of the Service.</p>
             </div>
           </li>
-          <li class="terms__item">
-            <div class="terms__title">3. Service description</div>
-            <div class="terms__text-box">
+          <li class="text-block__item">
+            <h3 class="text-block__title">3. Service description</h3>
+            <div class="text-block__box">
               <p>3.1 The Service Description describes the agreed scope and the requirements for the Service. The
                 Service Description applies together with any agreed deviations and amendments noted in this Agreement
                 or in a more recent document which is signed by duly authorized representatives from both parties.</p>
@@ -116,10 +122,11 @@
                 under sub-section 3.1.</p>
             </div>
           </li>
-          <li class="terms__item">
-            <div class="terms__title">4. Obligations of the supplier</div>
-            <p class="terms__instruction">The Supplier agrees and warrants:</p>
-            <div class="terms__text-box">
+          <li class="text-block__item">
+            <h3 class="text-block__title">4. Obligations of the supplier</h3>
+
+            <div class="text-block__box">
+              <p class="text-block__instruction">The Supplier agrees and warrants:</p>
               <p>4.1 To implement necessary and agreed implementation measures at the Buyer in accordance with the
                 Implementation Plan,</p>
               <p>4.2 To provide the Service in accordance with the Service Description</p>
@@ -133,9 +140,9 @@
               <p>4.6 To perform the Service in a professional manner.</p>
             </div>
           </li>
-          <li class="terms__item">
-            <div class="terms__title">5. Availsbility</div>
-            <div class="terms__text-box">
+          <li class="text-block__item">
+            <h3 class="text-block__title">5. Availsbility</h3>
+            <div class="text-block__box">
               <p>5.1 The Supplier is required to keep the Service available as specified in the Service Description.</p>
               <p>5.2 However, the Supplier is entitled to take measures affecting the availability of the Service during
                 office hours if required by technical, maintenance, operational or safety reasons. The Supplier shall
@@ -143,10 +150,10 @@
                 good time and usually no later than one week prior to the planned interruptions.</p>
             </div>
           </li>
-          <li class="terms__item">
-            <div class="terms__title">6. Obligations of the buyer</div>
-            <p class="terms__instruction">The Buyer agrees and warrants:</p>
-            <div class="terms__text-box">
+          <li class="text-block__item">
+            <h3 class="text-block__title">6. Obligations of the buyer</h3>
+            <div class="text-block__box">
+              <p class="text-block__instruction">The Buyer agrees and warrants:</p>
               <p>6.1 To provide the Supplier with assistance and access to personnel, premises, information and computer
                 systems necessary for the proper implementation of the Implementation Plan and the Service</p>
               <p>6.2 To ensure that the information transmitted to the Supplier for use in the Service complies with the
@@ -160,9 +167,9 @@
               <p>6.6 To pay fees according to issued invoice.</p>
             </div>
           </li>
-          <li class="terms__item">
-            <div class="terms__title">7. Obligations of the buyer</div>
-            <div class="terms__text-box">
+          <li class="text-block__item">
+            <h3 class="text-block__title">7. Obligations of the buyer</h3>
+            <div class="text-block__box">
               <p>7.1 The Buyer has listed a contact person who the Supplier may contact in relation to questions about
                 the performance of the Service. The contact person shall list the persons authorized to transmit
                 information to the Supplier for use in the Service (authorized users) and the persons authorized to
@@ -174,9 +181,9 @@
                 contacted regarding the performance of the Service.</p>
             </div>
           </li>
-          <li class="terms__item">
-            <div class="terms__title">8. Risk of for distributed information</div>
-            <div class="terms__text-box">
+          <li class="text-block__item">
+            <h3 class="text-block__title">8. Risk of for distributed information</h3>
+            <div class="text-block__box">
               <p>8.1 The Supplier is not responsible for any loss or misrepresentation of the information provided
                 through the Service, unless the Supplier is responsible for this in accordance with sub-section
                 15.5.</p>
@@ -190,9 +197,9 @@
                 was made available to the Buyer.</p>
             </div>
           </li>
-          <li class="terms__item">
-            <div class="terms__title">9. Liability for the contents of distributed information</div>
-            <div class="terms__text-box">
+          <li class="text-block__item">
+            <h3 class="text-block__title">9. Liability for the contents of distributed information</h3>
+            <div class="text-block__box">
               <p>9.1 The Buyer is responsible to the Supplier that the information transmitted to or processed in the
                 Service does not infringe any rights of third parties or in any other way violates applicable
                 legislation.</p>

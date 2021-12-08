@@ -56,7 +56,7 @@
     padding-bottom: 32px;
     max-width: 550px;
     font-size: 56px;
-    line-height: 1.29;
+    line-height: 72px;
 
     @include r($xl) {
       margin-bottom: 16px;
@@ -182,6 +182,7 @@
   &__content {
     position: relative;
     display: block;
+    min-height: 600px;
     max-height: 600px;
 
     @include r($extra) {
@@ -233,37 +234,6 @@
       height: 100%;
       border-radius: 16px;
       background-color: rgba($bl, 0.6);
-    }
-  }
-
-  &__iframe {
-    width: 878px;
-    height: 100%;
-    border: none;
-    border-radius: 16px;
-
-    @include r($extra) {
-      width: 790px;
-      height: 540px;
-    }
-
-    @include r($xxl) {
-      width: 650px;
-      height: 445px;
-    }
-
-    @include r($xl) {
-      width: 500px;
-      height: 342px;
-    }
-
-    @include r($lg) {
-      width: 400px;
-      height: 274px;
-    }
-
-    @include r($md) {
-      max-width: 100%;
     }
   }
 }
@@ -575,209 +545,6 @@
   }
 }
 
-.touch {
-  padding: 80px 0;
-
-  @include r($xl) {
-    padding: 40px 0;
-  }
-
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 120px 152px;
-    border-radius: 24px;
-    background-color: $blue-dark;
-
-    @include r($xxl) {
-      padding: 80px 70px;
-    }
-
-    @include r($xl) {
-      padding: 60px 45px;
-    }
-
-    @include r($lg) {
-      flex-direction: column;
-      padding: 40px 32px;
-    }
-  }
-
-  &__title {
-    margin-bottom: 16px;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.2;
-    color: $wh;
-
-    @include r($xl) {
-      font-size: 32px;
-    }
-  }
-
-  &__box {
-    margin-right: 15px;
-    max-width: 424px;
-
-    @include r($lg) {
-      margin-right: 0;
-      margin-bottom: 24px;
-      max-width: 557px;
-    }
-
-    @include r($md) {
-      max-width: 392px;
-    }
-  }
-
-  &__text {
-    color: $wh;
-  }
-
-  &__form {
-    display: flex;
-
-    @include r($md) {
-      flex-direction: column;
-      align-items: end;
-    }
-  }
-
-  &__input {
-    z-index: 2;
-    padding: 0 34px;
-    width: 100%;
-    min-width: 250px;
-    min-height: 78px;
-    border: 4px solid $blue-light;
-    border-radius: 8px;
-
-    @include r($md) {
-      margin-bottom: 16px;
-    }
-  }
-
-  &__button {
-    z-index: 1;
-    margin-left: -7px;
-    padding: 0 68px;
-    min-height: 78px;
-    border-radius: 0 8px 8px 0;
-    font-size: 16px;
-    background-color: $blue-light;
-
-    @include r($md) {
-      width: 100%;
-      border-radius: 8px;
-    }
-  }
-}
-
-.blog {
-  padding: 80px 0;
-
-  @include r($xl) {
-    padding: 40px 0;
-  }
-
-  @include r($lg) {
-    padding: 0;
-  }
-
-  &__inner {
-    padding: 160px 0;
-    border-radius: 24px;
-    background-color: $gray-light;
-
-    @include r($xl) {
-      padding: 80px 0 128px;
-    }
-
-    @include r($lg) {
-      padding: 40px 0 128px;
-    }
-  }
-
-  &__articles {
-    position: relative;
-    display: flex;
-  }
-}
-
-.article {
-  margin: 0 15px;
-  overflow: hidden;
-  border-radius: 16px;
-  background-color: $wh;
-
-  @include r($sm) {
-    margin: 0;
-  }
-
-  &__content {
-    padding: 24px;
-  }
-
-  &__img {
-    width: 100%;
-    height: 209px;
-    object-fit: cover;
-  }
-
-  &__date {
-    position: relative;
-    display: block;
-    margin-bottom: 24px;
-    padding-left: 32px;
-    color: $black;
-
-    @include r($xl) {
-      margin-bottom: 16px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 24px;
-      height: 24px;
-      background-image: url("../images/calendar.svg");
-    }
-  }
-
-  &__title {
-    margin-bottom: 16px;
-    font-weight: 500;
-    font-size: 24px;
-    color: $black;
-
-    @include r($xl) {
-      margin-bottom: 8px;
-    }
-  }
-
-  &__text {
-    margin-bottom: 16px;
-    height: 120px;
-    overflow: hidden;
-
-    @include r($xl) {
-      margin-bottom: 8px;
-    }
-
-    @include r($lg) {
-      height: 66px;
-    }
-
-    p {
-      @include r($md) {
-        font-size: 14px;
-      }
-    }
-  }
-}
-
 .arrow {
   margin-left: 10px;
   transition: transform 0.3s;
@@ -818,8 +585,8 @@
   border-radius: 24px 24px 0 0;
   background-color: $black;
 
-  &__item--first,
-  &__item--second {
+  .footer__item--first,
+  .footer__item--second {
     @include r($sm) {
       margin: 0 0 20px !important;
       padding-left: 24px;
@@ -870,12 +637,12 @@
     @include r($md) {
       flex-direction: column;
       align-items: center;
-      padding-bottom: 24px;
+      padding-bottom: 20px;
       border-bottom: none;
+    }
 
-      &::after {
-        display: block;
-      }
+    @include r($md) {
+      padding-bottom: 24px;
     }
 
     &::after {
@@ -888,6 +655,10 @@
       height: 1px;
       background-color: $gray-dark;
       transform: translateX(-50%);
+
+      @include r($md) {
+        display: block;
+      }
     }
   }
 
@@ -930,10 +701,6 @@
       margin-right: 0;
       margin-bottom: 40px;
       padding-bottom: 40px;
-
-      &::after {
-        display: block;
-      }
     }
 
     &::after {
@@ -946,6 +713,10 @@
       height: 1px;
       background-color: $gray-dark;
       transform: translateX(-50%);
+
+      @include r($md) {
+        display: block;
+      }
     }
   }
 
@@ -1012,7 +783,7 @@
   }
 
   &__link {
-    padding: 16px;
+    padding: 15px;
     border: 1px solid $gray-dark;
     border-radius: 4px;
 

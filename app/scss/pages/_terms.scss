@@ -1,4 +1,25 @@
 .terms {
+  &__button-terms,
+  &__button-privacy {
+    color: $blue-medium;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+
+    @include r($sm) {
+      padding: 0 14px;
+    }
+
+    &:hover {
+      color: $wh;
+      background-color: $blue-medium;
+    }
+
+    &:active {
+      color: $wh;
+      background-color: $blue-medium;
+    }
+  }
+
   &__inner {
     margin: 0 auto;
     padding: 160px 0;
@@ -10,28 +31,6 @@
 
     @include r($lg) {
       padding: 40px 0;
-    }
-  }
-
-  &__title {
-    margin-bottom: 16px;
-    font-weight: 500;
-    font-size: 24px;
-    color: $black;
-  }
-
-  &__text-box {
-    margin-bottom: 40px;
-    padding-left: 24px;
-
-    @include r($lg) {
-      margin-bottom: 32px;
-    }
-
-    p {
-      &:not(:last-child) {
-        margin-bottom: 16px;
-      }
     }
   }
 
@@ -51,24 +50,18 @@
     }
 
     @include r($sm) {
-      justify-content: space-around;
-      padding: 4px 0;
-      max-width: 100%;
+      justify-content: center;
     }
   }
 
-  &__button {
-    color: $blue-medium;
-    background-color: transparent;
-    transition: background-color 0.3s, color 0.3s;
-
+  &__button-terms {
     @include r($sm) {
-      padding: 0 5px;
-    }
-
-    &:hover {
-      color: $wh;
-      background-color: $blue-medium;
+      margin-right: 8px;
     }
   }
+}
+
+.terms__button--active {
+  color: $wh;
+  background-color: $blue-medium;
 }
