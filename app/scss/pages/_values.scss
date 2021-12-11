@@ -1,0 +1,127 @@
+.innovation {
+  padding: 160px 0;
+
+  @include r($xl) {
+    padding: 80px 0;
+  }
+
+  @include r($lg) {
+    padding: 48px 0;
+  }
+
+  &__text {
+    margin-bottom: 80px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: $black;
+
+    @include r($xl) {
+      margin-bottom: 48px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include r($lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    max-width: 272px;
+
+    @include r($lg) {
+      max-width: 100%;
+    }
+  }
+
+  &__img-wrap {
+    margin: 0 20px;
+
+    @include r($lg) {
+      margin: 20px 0;
+      max-width: 500px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+
+    @include r($xxl) {
+      padding-top: 30px;
+    }
+
+    @include r($xl) {
+      padding-top: 25px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #283d85;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 184px;
+
+      @include r($extra) {
+        margin-bottom: 95px;
+      }
+
+      @include r($xxl) {
+        margin-bottom: 50px;
+      }
+
+      @include r($xl) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__item--second {
+    &::after {
+      background-color: #394c8f;
+    }
+  }
+
+  &__item--third {
+    &::after {
+      background-color: #084ea8;
+    }
+  }
+
+  &__item--fourth {
+    &::after {
+      background-color: #9ad1f5;
+    }
+  }
+
+  &__item--fifth {
+    &::after {
+      background-color: #39bde5;
+    }
+  }
+
+  &__item--sixth {
+    &::after {
+      background-color: #3169b1;
+    }
+  }
+}

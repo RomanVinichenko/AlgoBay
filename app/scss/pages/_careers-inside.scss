@@ -1,0 +1,65 @@
+.careers__list {
+  display: flex;
+  margin-bottom: 37px;
+
+  @include r($md) {
+    flex-direction: column;
+  }
+}
+
+.careers__item {
+  &:not(:last-child) {
+    margin-right: 72px;
+
+    @include r($xl) {
+      margin-right: 55px;
+    }
+
+    @include r($md) {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.careers__name {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 40px;
+
+  @include r($xl) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.careers__proff {
+  display: block;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: $black;
+
+  @include r($xl) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @include r($lg) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.careers__contact {
+  padding: 40px 0 80px;
+  text-align: center;
+
+  @include r($lg) {
+    padding: 8px 0 0;
+  }
+}
+
+.careers__contact-form {
+  margin: 0 auto;
+}
