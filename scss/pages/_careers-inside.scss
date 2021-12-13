@@ -63,3 +63,12 @@
 .careers__contact-form {
   margin: 0 auto;
 }
+
+.careers__button {
+  margin-top: 70px;
+  width: 100%;
+
+  @include r($lg) {
+    margin-top: 40px;
+  }
+}
