@@ -1,16 +1,25 @@
 .details {
   padding: 160px 0;
 
+  @include r($xl) {
+    padding: 80px 0;
+  }
+
   @include r($lg) {
-    padding: 56px 0;
+    padding: 40px 0;
   }
 
   &__title {
     margin-bottom: 32px;
     font-weight: 500;
     font-size: 40px;
-    line-height: 1.2;
+    line-height: 48px;
     color: $black;
+
+    @include r($xl) {
+      font-size: 34px;
+      line-height: 42px;
+    }
 
     @include r($lg) {
       margin-bottom: 24px;
@@ -24,6 +33,20 @@
 
     @include r($lg) {
       margin-bottom: 32px;
+    }
+  }
+
+  &__img {
+    @include r($lg) {
+      height: 100%;
+      max-width: 1400px;
+    }
+  }
+
+  &__img-wrap {
+    @include r($lg) {
+      overflow-x: auto;
+      overflow-y: auto;
     }
   }
 }

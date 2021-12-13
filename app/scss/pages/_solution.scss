@@ -17,6 +17,15 @@
     display: flex;
     justify-content: space-between;
     padding: 160px 0;
+
+    @include r($xl) {
+      padding: 80px 0;
+    }
+
+    @include r($lg) {
+      flex-direction: column;
+      padding: 40px 0;
+    }
   }
 
   &__item {
@@ -24,18 +33,58 @@
     max-width: 475px;
     border-radius: 4px;
     background-color: $gray-light;
+
+    @include r($extra) {
+      padding: 40px;
+    }
+
+    @include r($xxl) {
+      padding: 24px;
+    }
+
+    @include r($lg) {
+      max-width: 100%;
+    }
+
+    &:nth-child(2) {
+      margin: 0 15px;
+
+      @include r($lg) {
+        margin: 0;
+      }
+    }
+
+    &:not(:last-child) {
+      @include r($lg) {
+        margin-bottom: 16px;
+      }
+    }
   }
 
   &__name {
     margin-bottom: 16px;
     font-weight: 500;
     font-size: 40px;
-    line-height: 1.2;
+    line-height: 48px;
     color: $black;
+
+    @include r($xxl) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @include r($xl) {
+      font-size: 24px;
+      line-height: 36px;
+    }
   }
 
   &__points {
     margin-bottom: 40px;
+
+    @include r($lg) {
+      margin-bottom: 16px;
+    }
   }
 
   &__descr {
@@ -43,20 +92,48 @@
     font-weight: 500;
     font-size: 24px;
     color: $gray-dark;
+
+    @include r($xxl) {
+      margin-bottom: 32px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__point {
-    padding-left: 56px;
-    font-size: 24px;
-    line-height: 1.66;
+    padding-left: 50px;
+    font-size: 22px;
+    line-height: 40px;
     color: $gray-dark;
     background-image: url("../images/done.svg");
     background-position: center left;
     background-size: 40px;
     background-repeat: no-repeat;
 
+    @include r($xxl) {
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    @include r($xl) {
+      padding-left: 48px;
+      font-size: 16px;
+      line-height: 32px;
+      background-size: 32px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 24px;
+
+      @include r($xxl) {
+        margin-bottom: 16px;
+      }
     }
   }
 }

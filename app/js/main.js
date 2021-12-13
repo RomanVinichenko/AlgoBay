@@ -1,10 +1,16 @@
+const button = document.querySelector('.button__links');
+const links = document.querySelector('.links');
+button.addEventListener('click', function () {
+    links.classList.toggle('links__active');
+});
+
 $(function () {
     $('.hero__inner').slick({
         loop: true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 2000,
         dots: true,
         arrows: true,
@@ -17,7 +23,7 @@ $(function () {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 2000,
         dots: false,
         arrows: true,
@@ -43,20 +49,3 @@ $(function () {
         ],
     });
 });
-
-const button = document.querySelector('.button__links');
-const links = document.querySelector('.links');
-button.addEventListener('click', function () {
-    links.classList.toggle('links__active');
-});
-
-const terms = document.querySelector('.terms__button-terms');
-const privacy = document.querySelector('.terms__button-privacy');
-privacy.addEventListener('click', function () {
-    privacy.classList.toggle('terms__button--active');
-});
-terms.addEventListener('click', function () {
-    terms.classList.toggle('terms__button--active');
-});
-
-//# sourceMappingURL=index.min.js.map

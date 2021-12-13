@@ -1,0 +1,130 @@
+.about {
+  padding: 160px 0;
+
+  @include r($xl) {
+    padding: 80px 0;
+  }
+
+  @include r($lg) {
+    padding: 40px 0;
+  }
+
+  &__descr {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: $black;
+
+    @include r($xl) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__text-block {
+    margin-bottom: 64px;
+
+    @include r($lg) {
+      margin-bottom: 32px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+
+      @include r($xl) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include r($lg) {
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+  }
+
+  &__category {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    color: $wh;
+
+    @include r($xl) {
+      margin-bottom: 12px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 8px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 48px;
+    min-height: 823px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+    @include r($xxl) {
+      min-height: 723px;
+    }
+
+    @include r($xl) {
+      min-height: 600px;
+    }
+
+    @include r($lg) {
+      min-height: 344px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 24px;
+      color: $wh;
+
+      @include r($xl) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__item--first {
+    border-radius: 16px 0 0 16px;
+
+    @include r($lg) {
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  &__item--last {
+    border-radius: 0 16px 16px 0;
+
+    @include r($lg) {
+      border-radius: 0 0 16px 16px;
+    }
+  }
+}
