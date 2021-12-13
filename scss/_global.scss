@@ -430,6 +430,10 @@ body {
   background-color: $gray-light;
 
   @include r($lg) {
+    padding: 80px 0;
+  }
+
+  @include r($md) {
     padding: 40px 0;
   }
 
@@ -490,9 +494,20 @@ body {
     line-height: 40px;
     color: $gray-dark;
 
+    @include r($xl) {
+      font-size: 20px;
+      line-height: 34px;
+    }
+
     @include r($lg) {
       font-size: 14px;
-      line-height: 1.25;
+      line-height: 22px;
+    }
+  }
+
+  &__subtitle--not {
+    @include r($md) {
+      margin-bottom: 0;
     }
   }
 }
