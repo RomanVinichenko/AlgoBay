@@ -19,18 +19,17 @@
   }
 
   &__item {
-    padding: 40px;
+    padding: 49px;
     border: 1px solid $border;
     border-radius: 8px;
-    background-image: url("../images/accordion.svg");
-    background-position: center right 40px;
-    background-size: 56px;
-    background-repeat: no-repeat;
     cursor: pointer;
 
     @include r($lg) {
-      padding: 32px 24px;
-      background-position: center right 24px;
+      padding: 47px;
+    }
+
+    @include r($md) {
+      padding: 47px 24px;
     }
 
     &:not(:last-child) {
@@ -44,13 +43,7 @@
     &--active {
       height: 100%;
       border: 1px solid $gray-light;
-      background-image: url("../images/accordion-minus.svg");
-      background-position: top 40px right 40px;
       background-color: $gray-light;
-
-      @include r($lg) {
-        background-position: top 32px right 24px;
-      }
 
       .question__text-block {
         display: block;
@@ -59,28 +52,42 @@
       .question__title {
         margin-bottom: 34px;
         color: $blue-dark;
+
+        &::after {
+          background-image: url("../images/accordion-minus.svg");
+        }
       }
     }
   }
 
   &__title {
+    position: relative;
+    padding-right: 66px;
     font-weight: 500;
     font-size: 24px;
-    line-height: 56px;
+    line-height: 36px;
     color: $black;
 
+    @include r($xl) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
     @include r($lg) {
-      max-width: 600px;
       font-size: 16px;
+      line-height: 24px;
     }
 
-    @include r($md) {
-      max-width: 500px;
-      line-height: 36px;
-    }
-
-    @include r($sm) {
-      max-width: 200px;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 56px;
+      height: 56px;
+      background-image: url("../images/accordion.svg");
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
     }
   }
 }
