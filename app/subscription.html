@@ -31,7 +31,7 @@
 <header class="header">
   <div class="container">
     <nav class="menu">
-      <a class="logo" href="#">
+      <a class="logo" href="index.html">
         <img class="logo__img" src="images/logo.svg" alt="Logo">
       </a>
       <ul class="menu__list">
@@ -75,27 +75,23 @@
           <img class="subscription__img" src="images/subscription.svg" alt="Back photo">
         </div>
         <div class="subscription__content">
-          <div class="top-form__wrapper subscription__form">
-            <form class="top-form">
-              <h3 class="top-form__title">
-                Subscription
-              </h3>
-              <div class="top-form__input-wrapper">
-                <label class="top-form__label sr-only" for="nickname">Input your name</label>
-                <input class="top-form__input" type="text" name="name" id="nickname" placeholder="Name"
-                       required>
-              </div>
-              <div class="top-form__input-wrapper form__input-mail">
-                <label class="top-form__label sr-only" for="mail">Input your email</label>
-                <input class="top-form__input" type="email" name="mail" id="mail"
-                       placeholder="E-mail" required>
-              </div>
-              <input type="checkbox"><span>I consent to the processing of personal data</span>
-              <button class="top-form__button button" type="submit">
-                Subscription
-              </button>
-            </form>
-          </div>
+          <form class="contact__form subscription__form">
+            <h3 class="subscription__title">Subscription</h3>
+            <label class="contact__label" for="contact-name">
+              <input class="contact__input" type="text" name="contact-name" id="contact-name">
+              <span class="contact__span">Name</span>
+            </label>
+            <label class="contact__label subscription__label--email" for="contact-email">
+              <input class="contact__input" type="text" name="contact-email" id="contact-email">
+              <span class="contact__span">E-mail</span>
+            </label>
+            <label class="contact__label" for="contact-checkbox">
+              <input class="contact__checkbox" type="checkbox" name="contact-checkbox" id="contact-checkbox"
+                     placeholder="I consent to the processing of personal data">
+              <span class="contact__text">I consent to the processing of personal data</span>
+            </label>
+            <button class="contact__button button" type="submit">Subscription</button>
+          </form>
         </div>
       </div>
     </div>
