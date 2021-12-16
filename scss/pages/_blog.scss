@@ -1,5 +1,13 @@
 .updates {
-  padding: 120px 0 272px;
+  padding: 120px 0 80px;
+
+  @include r($xl) {
+    padding: 80px 0 40px;
+  }
+
+  @include r($lg) {
+    padding: 24px 0 0;
+  }
 
   &__story {
     position: relative;
@@ -16,6 +24,12 @@
     background-position: center;
     background-size: cover;
 
+    @include r($md) {
+      margin-bottom: 16px;
+      padding: 16px;
+      min-height: 344px;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -30,10 +44,24 @@
 
   &__content {
     max-width: 680px;
+
+    @include r($md) {
+      max-width: 100%;
+    }
+  }
+
+  &__article-content {
+    @include r($md) {
+      padding: 16px;
+    }
   }
 
   &__title {
     margin-bottom: 64px;
+
+    @include r($lg) {
+      margin-bottom: 48px;
+    }
   }
 
   &__date {
@@ -44,6 +72,10 @@
     background-position: center left;
     background-size: 24px;
     background-repeat: no-repeat;
+
+    @include r($md) {
+      margin-bottom: 8px;
+    }
   }
 
   &__naming {
@@ -51,6 +83,16 @@
     font-weight: 500;
     font-size: 48px;
     line-height: 56px;
+
+    @include r($lg) {
+      font-size: 30px;
+      line-height: 38px;
+    }
+
+    @include r($md) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__link {
@@ -66,9 +108,17 @@
     display: flex;
     justify-content: space-between;
 
+    @include r($lg) {
+      flex-direction: column;
+    }
+
     .updates__story {
       &:not(:last-child) {
         margin-right: 32px;
+
+        @include r($lg) {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -76,17 +126,93 @@
   &__naming--small {
     font-size: 40px;
     line-height: 48px;
+
+    @include r($lg) {
+      font-size: 30px;
+      line-height: 38px;
+    }
+
+    @include r($md) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__articles {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   &__article {
     margin: 0 0 32px;
     max-width: 475px;
     border: 1px solid #e9f0f4;
+
+    @include r($xl) {
+      margin: 0 0 16px;
+      max-width: 400px;
+    }
+
+    @include r($lg) {
+      max-width: 344px;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+
+    @include r($md) {
+      margin-top: 16px;
+    }
+  }
+
+  &__article-title {
+    @include r($md) {
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__article-date {
+    @include r($md) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #e9f0f4;
+    border-radius: 4px;
+    color: $black;
+    background-color: $wh;
+    transition: color 0.3s, background-color 0.3s;
+
+    &:hover {
+      border: 1px solid transparent;
+      color: $wh;
+      background-color: $blue-medium;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
+
+      @include r($md) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__page--last {
+    @include r($md) {
+      display: none;
+    }
   }
 }
