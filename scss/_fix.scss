@@ -1,0 +1,109 @@
+//mixins.scss +++
+@mixin blue-hover {
+  &:hover {
+    background-color: #39a7e5;
+  }
+
+  &:focus {
+    border: 2px solid #99daff;
+  }
+}
+
+// Эффект наведения по кнопкам
+// _global.scss
+.button {
+  border: 2px solid transparent; // изменено
+  transition: background-color 0.3s, border 0.3s;
+
+  &:hover {
+    background-color: #084ea8;
+  }
+
+  &:focus {
+    border: 2px solid #39bde5;
+  }
+}
+
+// Эффект наведения по кнопкам
+// _global.scss
+.menu {
+  .menu__button--sign {
+    @include blue-hover;
+  }
+}
+
+// Эффект наведения по кнопкам
+// _home.scss
+
+.hero {
+  &__button {
+    @include blue-hover;
+  }
+}
+
+// Эффект наведения по кнопкам
+// _home.scss
+
+.footer {
+  &__link {
+    transition: background-color 0.3s, border 0.3s;
+
+    &:hover {
+      border: 1px solid transparent;
+      background-color: #3169b1;
+    }
+  }
+}
+
+// hero__box
+// h1 class изменен на "page-top__title" (2 изменения). Это заголовк в главном слайдере их там всего 3. 1 был правильный,
+// нужно изменить 2 остльных
+
+// Эффект наведения по дропдаунам
+// _global.scss
+.menu {
+  &__item--drop {
+    transition: color 0.3s;
+
+    &:hover {
+      color: #3169b1;
+      background-image: url("../images/dropdown-arrow-blue.svg");
+    }
+  }
+}
+
+// Эффект наведения по дропдаунам
+// _global.scss
+.touch {
+  &__button {
+    @include blue-hover;
+  }
+}
+
+// Эффект наведения по дропдаунам
+// _home.scss
+.footer {
+  &__sublink {
+    transition: color 0.3s;
+
+    &:hover {
+      color: #39bde5;
+    }
+  }
+}
+
+// footer переделан немного!!!
+
+// Эффект наведения по дропдаунам
+// _contact.scss
+.contact {
+  &__link {
+    transition: all 0.3s;
+
+    &:hover {
+      path {
+        fill: $wh;
+      }
+    }
+  }
+}
