@@ -91,6 +91,8 @@
   }
 
   &__button {
+    @include blue-hover;
+
     background-color: $blue-light;
   }
 }
@@ -588,10 +590,15 @@
 
   .footer__item--first,
   .footer__item--second {
-    @include r($sm) {
+    @include r($md) {
       margin: 0 0 20px !important;
-      padding-left: 24px;
       width: 50%;
+      text-align: center;
+    }
+
+    @include r($sm) {
+      padding-left: 20px;
+      text-align: left;
     }
   }
 
@@ -614,8 +621,9 @@
       flex-wrap: wrap;
     }
 
-    @include r($sm) {
-      justify-content: space-between;
+    @include r($md) {
+      justify-content: space-around; // 1
+      width: 100%;
     }
   }
 
@@ -671,7 +679,7 @@
       margin-bottom: 20px;
     }
 
-    @include r($sm) {
+    @include r($md) {
       margin-bottom: 0;
     }
 
@@ -680,6 +688,10 @@
 
       @include r($xl) {
         margin-right: 40px;
+      }
+
+      @include r($md) {
+        margin-right: 0; // 2
       }
     }
   }
@@ -737,11 +749,20 @@
     font-weight: 400;
     font-size: 14px;
     color: $gray;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #39bde5;
+    }
   }
 
   &__menu-link {
     display: block;
     margin-bottom: 16px;
+
+    @include r($md) {
+      margin-bottom: 0;
+    }
   }
 
   &__box {
@@ -787,9 +808,15 @@
     padding: 15px;
     border: 1px solid $gray-dark;
     border-radius: 4px;
+    transition: background-color 0.3s, border 0.3s;
 
     @include r($md) {
       padding: 12px;
+    }
+
+    &:hover {
+      border: 1px solid transparent;
+      background-color: #3169b1;
     }
   }
 

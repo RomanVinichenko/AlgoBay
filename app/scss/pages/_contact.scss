@@ -160,6 +160,13 @@
     height: 56px;
     border: 1px solid $gray;
     background-color: $wh;
+    transition: all 0.3s;
+
+    &:hover {
+      path {
+        fill: $wh;
+      }
+    }
   }
 
   &__form {
