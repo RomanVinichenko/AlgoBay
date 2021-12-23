@@ -93,6 +93,11 @@ body {
 
   &__item {
     color: $black;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #3169b1;
+    }
 
     &:not(:last-child) {
       margin-right: 64px;
@@ -326,9 +331,10 @@ body {
           position: absolute;
           left: -5px;
           top: -5px;
-          width: 10px;
+          width: 18px;
           height: 18px;
-          background-image: url("../images/elipse.svg");
+          border: 2px solid #39bde5;
+          border-radius: 50%;
         }
       }
     }
@@ -345,6 +351,7 @@ body {
         border: none;
         border-radius: 50%;
         font-size: 0;
+        background-color: #e4e7e9;
         cursor: pointer;
       }
     }
@@ -360,9 +367,14 @@ body {
     padding: 16px;
     border: 1px solid #e4e7e9;
     border-radius: 16px;
+    transition: all 0.3s;
 
     @include r($extra) {
       top: 88%;
+    }
+
+    &:hover {
+      background-color: $wh;
     }
   }
 
@@ -375,16 +387,24 @@ body {
       left: 0;
       z-index: 5;
     }
+
+    &:hover {
+      background-image: url("../images/top-left-black.svg");
+    }
   }
 
   .slick-next {
     right: -88px;
     background-image: url("../images/top-right.svg");
-    background-color: $wh;
+    background-color: $gray-light;
 
     @include r($extra) {
       right: 0;
       z-index: 5;
+    }
+
+    &:hover {
+      background-image: url("../images/top-right-black.svg");
     }
   }
 }
@@ -413,27 +433,42 @@ body {
     }
   }
 
-  .slick-prev {
-    right: 99px;
+  .slick-prev,
+  .slick-next {
     z-index: 5;
     border: 1px solid $border;
-    background-image: url("../images/prev-arrow.svg");
     background-color: $wh;
+    transition: all 0.3s;
+
+    &:hover {
+      border: 1px solid transparent;
+      background-color: $blue-medium;
+    }
+  }
+
+  .slick-prev {
+    right: 99px;
+    background-image: url("../images/prev-arrow.svg");
 
     @include r($xl) {
       transform: translateX(-115%);
+    }
+
+    &:hover {
+      background-image: url("../images/prev-arrow-white.svg");
     }
   }
 
   .slick-next {
     right: 19px;
-    z-index: 5;
-    border: none;
     background-image: url("../images/next-arrow.svg");
-    background-color: $blue-medium;
 
     @include r($xl) {
       transform: translateX(15%);
+    }
+
+    &:hover {
+      background-image: url("../images/next-arrow-white.svg");
     }
   }
 }
