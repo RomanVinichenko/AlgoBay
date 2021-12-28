@@ -561,7 +561,6 @@
 .article {
   &:hover {
     box-shadow: (0 4px 32px rgba(30, 41, 73, 0.04));
-    cursor: pointer;
 
     .link {
       color: $blue-medium;
