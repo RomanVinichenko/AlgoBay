@@ -1,5 +1,7 @@
 .tariffs {
   .button--light {
+    @include blue-hover;
+
     width: 100%;
     background-color: $blue-light;
   }
@@ -11,6 +13,14 @@
   .button--dark {
     width: 100%;
     background-color: $blue-dark;
+
+    &:hover {
+      background-color: #32427c;
+    }
+
+    &:focus {
+      border: 2px solid #558ad2;
+    }
   }
 
   &__list {
